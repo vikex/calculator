@@ -1,7 +1,12 @@
 package calculator;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class MainTest extends TestCase {
+public class MainTest {
 
+    
+    @Test
+    public void testAdd(){
+        
+    }
 }
