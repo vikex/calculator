@@ -9,17 +9,34 @@ public class CalculatorTest {
     @Test
     public void testAdd(){
         var calculator = new Calculator();
-        var suma = calculator.add(1,2);
+        var sum = calculator.add(1,2);
         
-        assertEquals(3, suma);
+        assertEquals(3, sum);
     }
 
     @Test
-    public void minus(){
+    public void minusGreaterFromLower(){
         var calculator = new Calculator();
-        var suma = calculator.minus(3,2);
+        var sum = calculator.minus(3,2);
 
-        assertEquals(1, suma);
+        assertEquals(1, sum);
+    }
+
+    @Test
+    public void minusLowerFromGreater(){
+        var calculator = new Calculator();
+        var sum = calculator.minus(1,2);
+
+        assertEquals(-1, sum);
+    }
+
+    @Test
+    public void minusZeroStaySame(){
+        var calculator = new Calculator();
+        var sum = calculator.minus(3,0);
+
+        assertEquals(-1, sum);
     }
     
 }
+
