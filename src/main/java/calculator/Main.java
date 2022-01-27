@@ -44,4 +44,5 @@ public class Main {
         double liczba2 = scanner.nextDouble();
         return liczba2;
     }
+
 }

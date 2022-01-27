@@ -35,8 +35,42 @@ public class CalculatorTest {
         var calculator = new Calculator();
         var sum = calculator.minus(3,0);
 
-        assertEquals(-1, sum);
+        assertEquals(3, sum);
     }
-    
+    @Test
+    public void mnozenieStandard() {
+        var calculator = new Calculator();
+        var sum = calculator.mnozenie(5, 5);
+
+        assertEquals(25, sum);
+    }
+    @Test
+    public void mnozenieZero() {
+        var calculator = new Calculator();
+        var sum = calculator.mnozenie(5, 0);
+
+        assertEquals(0, sum);
+    }
+    @Test
+    public void mnozenieMinus() {
+        var calculator = new Calculator();
+        var sum = calculator.mnozenie(5, -5);
+
+        assertEquals(-25, sum);
+    }
+    @Test
+    public void dzielenie() {
+        var calculator = new Calculator();
+        var sum = calculator.dzielenie(25, 5);
+
+        assertEquals(5, sum);
+    }
+    @Test(expected = ArithmeticException.class)
+    public void dzielenieZero() {
+        var calculator = new Calculator();
+        var sum = calculator.dzielenie(5, 0);
+
+        assertEquals(0, sum);
+    }
 }
 
